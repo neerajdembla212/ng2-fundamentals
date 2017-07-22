@@ -1,0 +1,12 @@
+<div>
+    <h1>Upcoming Angular 2 Events</h1>
+    <hr/>
+    <div class="row">
+        <div class="col-md-5" *ngFor="let event of events">
+            <!-- Here we are creating a local variable thumbnail which has access to all public members of child
+            Hence we can call any method of child from parent or bind any data to child from parent. 
+        -->
+            <event-thumbnail (click)="handleThumbnailClick(event.name)" [event]="event"></event-thumbnail>
+        </div>
+    </div>
+</div>
